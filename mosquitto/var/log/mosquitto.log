@@ -2843,3 +2843,4 @@
 1711977887: Client mymqtt-171928194635603 closed its connection.
 1711977990: New connection from 192.168.0.16:46952 on port 1883.
 1711977990: New client connected from 192.168.0.16:46952 as mymqtt-171928194635603 (p2, c0, k60).
+1711978128: Client mymqtt-171928194635603 closed its connection.
