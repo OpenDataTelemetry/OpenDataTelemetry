@@ -1,0 +1,98 @@
+version: '3.3'
+
+services:
+  mosquitto:
+    container_name: mosquitto
+    restart: always
+    image: eclipse-mosquitto:2.0.15-openssl
+    volumes:
+      - ./mosquitto/etc:/mosquitto/config
+      - ./mosquitto/var/data:/mosquitto/data
+      - ./mosquitto/var/log:/mosquitto/log
+    ports:
+      - 1883:1883
+      # - 8883:8883
+      # - 9001:9001
+      # - 9002:9002
+    networks:
+      - open-data-telemetry-network
+
+  zookeeper:
+    container_name: zookeeper
+    restart: always
+    image: confluentinc/cp-zookeeper:7.6.0
+    ports:
+    - "2181:2181"
+    environment:
+      ZOOKEEPER_CLIENT_PORT: 2181
+      ZOOKEEPER_TICK_TIME: 2000
+      ZOOKEEPER_SYNC_LIMIT: 2
+    networks:
+      - open-data-telemetry-network
+
+  kafka:
+    container_name: kafka
+    restart: always
+    image: confluentinc/cp-kafka:7.6.0
+    depends_on:
+    - zookeeper
+    ports:
+    - "9094:9094"
+    environment:
+      KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
+      KAFKA_LISTENERS: INTERNAL://0.0.0.0:9092,OUTSIDE://0.0.0.0:9094
+      KAFKA_ADVERTISED_LISTENERS: INTERNAL://kafka:9092,OUTSIDE://localhost:9094
+      KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: INTERNAL:PLAINTEXT,OUTSIDE:PLAINTEXT
+      KAFKA_INTER_BROKER_LISTENER_NAME: INTERNAL
+      KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
+    networks:
+      - open-data-telemetry-network
+
+  telegraf-kafka-influxdb:
+    container_name: telegraf-kafka-influxdb
+    restart: always
+    image: telegraf:1.29.3-alpine
+    depends_on:
+    - kafka
+    environment:
+      KAFKA_BROKER: "kafka:9092"
+      KAFKA_TOPIC: "SmartCampusMaua.smartcampusmaua"
+      INFLUXDB_URL: "https://us-east-1-1.aws.cloud2.influxdata.com"
+      INFLUXDB_TOKEN: "fq2IqC2r2vEf0o9WhN6D9TAbW3kR2X4Cq53m_HEiJHcR3VncntEOoGFKgk_9lVhS6jhV1ETqXq65_wffpXrR4w=="
+      INFLUXDB_ORGANIZATION: "SmartCampusMaua"
+      INFLUXDB_DATABASE: "smartcampusmaua"
+    volumes:
+      - ./telegraf-kafka-influxdb/telegraf.conf:/etc/telegraf/telegraf.conf:ro
+    networks:
+      - open-data-telemetry-network
+
+  telegraf-kafka-mqtt:
+    container_name: telegraf-kafka-mqtt
+    restart: always
+    image: telegraf:1.29.3-alpine
+    depends_on:
+    - kafka
+    - mosquitto
+    environment:
+      KAFKA_BROKER: "kafka:9092"
+      KAFKA_TOPIC: "SmartCampusMaua.smartcampusmaua"
+      MQTT_TOPIC: "SmartCampusMaua/{{ .PluginName }}"
+      MQTT_BROKER: "mqtt://mosquitto:1883"
+    volumes:
+      - ./telegraf-kafka-mqtt/telegraf.conf:/etc/telegraf/telegraf.conf:ro
+    networks:
+      - open-data-telemetry-network
+
+  
+
+networks:
+  open-data-telemetry-network:
+    driver: bridge
+
+
+
+# TIMESERIES-API
+# GATEWAY-MQTT
+
+
+
