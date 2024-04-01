@@ -24,7 +24,7 @@ git clone https://github.com/OpenDataTelemetry/gateway-mqtt-lns-imt.git
 git clone https://github.com/OpenDataTelemetry/decode.git
 cd gateway-mqtt-lns-imt
 go mod tidy
-go run main.go
+go run local/main.go
 go run simulator/main.go
 ```
 * Run timeseries-api:
@@ -177,13 +177,13 @@ Go to `gateway-mqtt-lns-imt` directory install all necessary packages and run th
 ```bash
 cd ~/Git/OpenDataTelemetry/gateway-mqtt-lns-imt
 go mod tidy
-go run main.go
+go run local/main.go
 ```
 
 To enable the synthetic data simulator:
 ```bash
-cd ~/Git/OpenDataTelemetry/gateway-mqtt-lns-imt/simulator
-go run main.go
+cd ~/Git/OpenDataTelemetry/gateway-mqtt-lns-imt/
+go run simulator/main.go
 ```
 The simulator shall publish sensor styled data to the local MQTT Broker each second.
 
