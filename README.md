@@ -196,3 +196,18 @@ Similarly, to verify that the simulated data is being decoded from Kafka Broker 
 ```bash
 mosquitto_sub -h localhost -t "SmartCampusMaua/#"
 ```
+
+## TIMESERIES-API
+The timeseries-api retrieves the data from InfluxDB Cloud. But only available with some SmartLight endpoints.
+
+Note that in commands bellow the main.go shall read the environment variables from InfluxDB Cloud Read API Tokens:
+```yaml
+cd ~/Git/OpenDataTelemetry
+git clone https://github.com/OpenDataTelemetry/timeseries-api.git 
+cd timeseries-api
+go mod tidy
+
+INFLUXDB_URL=https://us-east-1-1.aws.cloud2.influxdata.com \
+  INFLUXDB_DATABASE=smartcampusmaua \
+  INFLUXDB_TOKEN="INFLUX_READ_TOKEN_HERE" go run main.go
+```

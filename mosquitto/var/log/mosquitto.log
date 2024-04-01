@@ -2771,3 +2771,6 @@
 1711944557: New client connected from 172.24.0.1:38244 as mqtt-af863a42-328c-47be-92ef-9903482f8fd4 (p2, c1, k30).
 1711944659: Client mqtt-e4f44ae5-7fcd-4007-804e-b4812445c53a closed its connection.
 1711945035: Client mqtt-af863a42-328c-47be-92ef-9903482f8fd4 closed its connection.
+1711945805: Client Telegraf-Output-IoJG9 disconnected.
+1711945805: mosquitto version 2.0.15 terminating
+1711945805: Saving in-memory database to /mosquitto/data//mosquitto.db.
