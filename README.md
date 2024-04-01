@@ -182,7 +182,7 @@ go run main.go
 
 To enable the synthetic data simulator:
 ```bash
-cd ~/Git/OpenDataTelemetry/gateway-mqtt-lns-imt/synthetic-data-simulator
+cd ~/Git/OpenDataTelemetry/gateway-mqtt-lns-imt/simulator
 go run main.go
 ```
 The simulator shall publish sensor styled data to the local MQTT Broker each second.
