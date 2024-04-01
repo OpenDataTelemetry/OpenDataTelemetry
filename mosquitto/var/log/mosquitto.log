@@ -2805,3 +2805,41 @@
 1711950542: Client mymqtt-171928194635603 closed its connection.
 1711950543: New connection from 172.24.0.2:46522 on port 1883.
 1711950543: New client connected from 172.24.0.2:46522 as Telegraf-Output-GmuPx (p2, c1, k30).
+1711950661: mosquitto version 2.0.15 terminating
+1711950661: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1711977835: mosquitto version 2.0.15 starting
+1711977835: Config loaded from /mosquitto/config/mosquitto.conf.
+1711977835: Opening ipv4 listen socket on port 1883.
+1711977835: Opening ipv6 listen socket on port 1883.
+1711977835: mosquitto version 2.0.15 running
+1711977835: New connection from 192.168.0.16:46912 on port 1883.
+1711977835: New client connected from 192.168.0.16:46912 as mymqtt-171928194635603 (p2, c0, k60).
+1711977836: New connection from 172.24.0.6:54986 on port 1883.
+1711977836: New client connected from 172.24.0.6:54986 as Telegraf-Output-u7hMH (p2, c1, k30).
+1711977836: Client Telegraf-Output-u7hMH closed its connection.
+1711977838: New connection from 172.24.0.6:54990 on port 1883.
+1711977838: New client connected from 172.24.0.6:54990 as Telegraf-Output-ljOh1 (p2, c1, k30).
+1711977838: Client Telegraf-Output-ljOh1 closed its connection.
+1711977840: New connection from 172.24.0.6:59062 on port 1883.
+1711977840: New client connected from 172.24.0.6:59062 as Telegraf-Output-z3Ezs (p2, c1, k30).
+1711977841: Client Telegraf-Output-z3Ezs closed its connection.
+1711977842: New connection from 172.24.0.6:59070 on port 1883.
+1711977842: New client connected from 172.24.0.6:59070 as Telegraf-Output-qpOgz (p2, c1, k30).
+1711977843: Client Telegraf-Output-qpOgz closed its connection.
+1711977844: New connection from 172.24.0.6:59086 on port 1883.
+1711977844: New client connected from 172.24.0.6:59086 as Telegraf-Output-4tEK8 (p2, c1, k30).
+1711977845: Client Telegraf-Output-4tEK8 closed its connection.
+1711977848: New connection from 172.24.0.5:50376 on port 1883.
+1711977848: New client connected from 172.24.0.5:50376 as Telegraf-Output-Cyx5s (p2, c1, k30).
+1711977849: Client Telegraf-Output-Cyx5s closed its connection.
+1711977853: New connection from 172.24.0.5:43884 on port 1883.
+1711977853: New client connected from 172.24.0.5:43884 as Telegraf-Output-wEWjN (p2, c1, k30).
+1711977853: Client Telegraf-Output-wEWjN closed its connection.
+1711977862: New connection from 172.24.0.6:52022 on port 1883.
+1711977862: New client connected from 172.24.0.6:52022 as Telegraf-Output-Q4YFK (p2, c1, k30).
+1711977863: Client Telegraf-Output-Q4YFK closed its connection.
+1711977876: New connection from 172.24.0.6:42862 on port 1883.
+1711977876: New client connected from 172.24.0.6:42862 as Telegraf-Output-SDvu4 (p2, c1, k30).
+1711977887: Client mymqtt-171928194635603 closed its connection.
+1711977990: New connection from 192.168.0.16:46952 on port 1883.
+1711977990: New client connected from 192.168.0.16:46952 as mymqtt-171928194635603 (p2, c0, k60).
