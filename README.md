@@ -2,7 +2,7 @@
 
 The core of OpenDataTelemetry Stack is a set of gateway services connected to an Apache Kafka Brokers that distribute realtime data stream publishing in a MQTT Broker for instant messages an a timeseries api to retrieve historical data from an InfluxDB database.
 
-![alt text](<Screenshot from 2024-04-01 00-13-15.png>)
+![alt text](_lib/img/screen-open-data-telemetry-diagram.png)
 
 ## QuickStart
 * Make the default OpenDataTelemetry directory:
