@@ -139,6 +139,12 @@ go version
 * Windows:
 Follow https://go.dev/doc/install.
 
+### Install librdkafka-dev to kafka go packages
+```bash
+sudo apt update
+sudo apt install build-essential pkg-config git librdkafka-dev
+```
+
 ### Run the brokers and telegrafs (Linux, WSL2)
 Clone this repository and run `docker-compose.yaml`:
 ```yaml
