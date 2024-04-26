@@ -2,54 +2,10 @@
 
 The core of OpenDataTelemetry Stack is a set of gateway services connected to an Apache Kafka Brokers that distribute realtime data stream publishing in a MQTT Broker for instant messages an a timeseries api to retrieve historical data from an InfluxDB database.
 
-![alt text](_lib/img/screen-open-data-telemetry-diagram.png)
-
-## QuickStart
-* Make the default OpenDataTelemetry directory:
-```yaml
-mkdir -p ~/Git/OpenDataTelemetry
-```
-* Run local MQTT, Kafka, Telegraf to InfluxDB Cloud and Telegraf to MQTT via `docker-compose.yaml`:
-```yaml
-cd ~/Git/OpenDataTelemetry
-git clone https://github.com/OpenDataTelemetry/OpenDataTelemetry.git
-cd ~/Git/OpenDataTelemetry/OpenDataTelemetry
-docker compose up
-```
-* Run gateway-mqtt-lns-imt with local decoded and simulator:
-```yaml
-cd ~/Git/OpenDataTelemetry
-# Edit go.mod to set local decode. See detailed instructions.
-git clone https://github.com/OpenDataTelemetry/gateway-mqtt-lns-imt.git 
-git clone https://github.com/OpenDataTelemetry/decode.git
-cd gateway-mqtt-lns-imt
-go mod tidy
-go run local/main.go
-go run simulator/main.go
-```
-* Run timeseries-api:
-```yaml
-cd ~/Git/OpenDataTelemetry
-git clone https://github.com/OpenDataTelemetry/timeseries-api.git 
-cd timeseries-api
-go mod tidy
-
-INFLUXDB_URL=https://us-east-1-1.aws.cloud2.influxdata.com \
-  INFLUXDB_DATABASE=smartcampusmaua \
-  INFLUXDB_TOKEN="INFLUX_READ_TOKEN_HERE" go run main.go
-```
-* Subscribe to a Topic and listen for simulator data at MQTT:
-```yaml
-mosquitto_sub -h localhost -t "application/+/node/+/rx"
-```
-* Subscribe to a Topic and listen for decoded JSON data at MQTT:
-```yaml
-mosquitto_sub -h localhost -t "SmartCampusMaua/#"
-```
-
-## Develop Environment
-
+## Local Develop Environment
 The develop environment comprises a docker-compose.yaml file with an MQTT Broker with no password required, an Apache Kafka Broker and Telegrafs configuration files. One Telegraf configuration file connect to the Kafka Broker and Write to InfluxDB while the other publishes to a MQTT Broker.
+
+![alt text](image.png)
 
 Thus, the developer shall focus on establish a connection with the source of the data, decoding it and sending it to the Kafka Broker with the gateways inputs and generating solutions on how work with the decoded data in realtime and analyzes it using a MQTT subsriber service ans the timeseries-api outputs. 
 
@@ -59,7 +15,7 @@ So, download this repository and run the Brokers and Telegrafs files to Write to
 * Docker Engine installed in Linux or WSL2;
 * InfluxDB Cloud account with a bucket and `READ` and `WRITE` tokens;
 * Install `mosquitto-clients` from Linux Apt repository in Linux or WSL2;
-* Install `golang` tools in Linux or WSL2 or Windows.
+* Install `golang` tools in Linux or WSL2.
 
 ### Install WSL2 (Only Windows)
 Open PowerShell as Admin the run:
@@ -97,6 +53,7 @@ sudo usermod -aG docker $USER
 # Logout reboot then, test without the sudo command
 docker run hello-world
 ```
+
 ### Create InfluxDB account and set the bucket and its tokens
 Create InfluxDB Account, then:
 * Start New Bucket:
@@ -121,7 +78,7 @@ sudo apt install mosquitto-clients
 ### Install golang tools
 From: https://go.dev/doc/install
 
-* LInux, WSL2:
+* Linux, WSL2:
 Install the binaries to `/usr/local`:
 ```bash
 sudo rm -rf /usr/local/go && sudo tar -C /usr/local -xzf go1.22.1.linux-amd64.tar.gz
@@ -136,16 +93,15 @@ And confirm `go` in installed open a new Terminal:
 go version
 ```
 
-* Windows:
-Follow https://go.dev/doc/install.
-
 ### Install librdkafka-dev to kafka go packages
 ```bash
 sudo apt update
 sudo apt install build-essential pkg-config git librdkafka-dev
 ```
 
-### Run the brokers and telegrafs (Linux, WSL2)
+## Run docker-compose.yaml
+Run the brokers and telegrafs (Linux, WSL2).
+
 Clone this repository and run `docker-compose.yaml`:
 ```yaml
 mkdir -p ~/Git/OpenDataTelemetry
@@ -158,7 +114,7 @@ Configure the docker-compose.yaml according to the InfluxDB tokens, the run it:
 docker compose up
 ```
 
-## GATEWAY & DECODE (Linux, WSL2, Windows)
+## GATEWAY & DECODE (Linux, WSL2)
 THe gateway is where the data is received, decoded and sent to Apache Kafka Broker. A gateway named as `gateway-mqtt-lns-imt` means a repository where is is connected with the Lora Network Server (LNS) of Instituto Maua de Tecnologia (IMT) via MQTT Broker.
 
 The `gateway-mqtt-lns-imt` module manages new MQTT connections in a different MQTT Broker or topics. In development mode, it is interesting have control over the data and simulating new devices to be attached at the gateway.
@@ -217,3 +173,16 @@ INFLUXDB_URL=https://us-east-1-1.aws.cloud2.influxdata.com \
   INFLUXDB_DATABASE=smartcampusmaua \
   INFLUXDB_TOKEN="INFLUX_READ_TOKEN_HERE" go run main.go
 ```
+
+# SmartCampusMaua Bucket:
+**Measurements:**
+* WaterTankLevel: `data_distance` (millimeters from the water); 
+* Hydrometer: `data_counter` (accumulated liters); 
+* ArtesianWell: `data_filter_inlet_pressure` (bar), `data_filter_outlet_pressure` (bar);
+* Timestamp: `Unix Timestamp milliseconds` (13 digits).
+
+
+
+
+
+

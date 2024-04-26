@@ -2844,3 +2844,128 @@
 1711977990: New connection from 192.168.0.16:46952 on port 1883.
 1711977990: New client connected from 192.168.0.16:46952 as mymqtt-171928194635603 (p2, c0, k60).
 1711978128: Client mymqtt-171928194635603 closed its connection.
+1713799702: mosquitto version 2.0.15 starting
+1713799702: Config loaded from /mosquitto/config/mosquitto.conf.
+1713799702: Opening ipv4 listen socket on port 1883.
+1713799702: Opening ipv6 listen socket on port 1883.
+1713799702: mosquitto version 2.0.15 running
+1713799703: New connection from 172.22.0.5:52116 on port 1883.
+1713799703: New client connected from 172.22.0.5:52116 as Telegraf-Output-gzb3Z (p2, c1, k30).
+1713799704: Client Telegraf-Output-gzb3Z closed its connection.
+1713799705: New connection from 172.22.0.5:52132 on port 1883.
+1713799705: New client connected from 172.22.0.5:52132 as Telegraf-Output-7QkiP (p2, c1, k30).
+1713799705: Client Telegraf-Output-7QkiP closed its connection.
+1713799706: New connection from 172.22.0.6:42834 on port 1883.
+1713799706: New client connected from 172.22.0.6:42834 as Telegraf-Output-aRDuG (p2, c1, k30).
+1713799707: Client Telegraf-Output-aRDuG closed its connection.
+1713799708: New connection from 172.22.0.5:52148 on port 1883.
+1713799708: New client connected from 172.22.0.5:52148 as Telegraf-Output-mRPJz (p2, c1, k30).
+1713799959: New connection from 192.168.65.1:40760 on port 1883.
+1713799959: New client connected from 192.168.65.1:40760 as mqtt-fe5dd62f-ebe8-4fcc-9c6d-5b01cffcb5e7 (p2, c1, k30).
+1713799988: New connection from 192.168.65.1:40803 on port 1883.
+1713799988: New client connected from 192.168.65.1:40803 as mqtt-f7fd2107-8aad-4b66-b697-65e775add3b7 (p2, c1, k30).
+1713800009: Client mqtt-fe5dd62f-ebe8-4fcc-9c6d-5b01cffcb5e7 closed its connection.
+1713801503: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1713805828: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1713807629: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1713809430: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1713811231: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1713813032: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1713814833: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1713816634: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1713818435: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1713819384: Client mqtt-f7fd2107-8aad-4b66-b697-65e775add3b7 closed its connection.
+1713819617: New connection from 192.168.65.1:65046 on port 1883.
+1713819617: New client connected from 192.168.65.1:65046 as mqtt-4163f6cf-5dec-4116-ad7d-0e6d76a6e38a (p2, c1, k30).
+1713819628: New connection from 192.168.65.1:65075 on port 1883.
+1713819628: New client connected from 192.168.65.1:65075 as mqtt-b9540bb2-510f-4a6e-b0e6-de266a9ecb95 (p2, c1, k30).
+1713819630: Client mqtt-b9540bb2-510f-4a6e-b0e6-de266a9ecb95 closed its connection.
+1713819662: Client Telegraf-Output-mRPJz disconnected.
+1713819662: mosquitto version 2.0.15 terminating
+1713819662: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1713897927: mosquitto version 2.0.15 starting
+1713897927: Config loaded from /mosquitto/config/mosquitto.conf.
+1713897927: Opening ipv4 listen socket on port 1883.
+1713897927: Opening ipv6 listen socket on port 1883.
+1713897927: mosquitto version 2.0.15 running
+1713897927: New connection from 172.22.0.5:36776 on port 1883.
+1713897927: New client connected from 172.22.0.5:36776 as Telegraf-Output-m0FX4 (p2, c1, k30).
+1713897928: Client Telegraf-Output-m0FX4 closed its connection.
+1713897928: New connection from 172.22.0.5:36792 on port 1883.
+1713897928: New client connected from 172.22.0.5:36792 as Telegraf-Output-9F4S8 (p2, c1, k30).
+1713897929: Client Telegraf-Output-9F4S8 closed its connection.
+1713897930: New connection from 172.22.0.5:36798 on port 1883.
+1713897930: New client connected from 172.22.0.5:36798 as Telegraf-Output-hFaIu (p2, c1, k30).
+1713897930: Client Telegraf-Output-hFaIu closed its connection.
+1713897931: New connection from 172.22.0.5:36810 on port 1883.
+1713897931: New client connected from 172.22.0.5:36810 as Telegraf-Output-azvlI (p2, c1, k30).
+1713897932: Client Telegraf-Output-azvlI closed its connection.
+1713897933: New connection from 172.22.0.2:52858 on port 1883.
+1713897933: New client connected from 172.22.0.2:52858 as Telegraf-Output-u8fDw (p2, c1, k30).
+1713897934: Client Telegraf-Output-u8fDw closed its connection.
+1713897935: New connection from 172.22.0.6:33846 on port 1883.
+1713897935: New client connected from 172.22.0.6:33846 as Telegraf-Output-maHRW (p2, c1, k30).
+1713897936: Client Telegraf-Output-maHRW closed its connection.
+1713897940: New connection from 172.22.0.5:55168 on port 1883.
+1713897940: New client connected from 172.22.0.5:55168 as Telegraf-Output-K4iXr (p2, c1, k30).
+1713897940: Client Telegraf-Output-K4iXr closed its connection.
+1713897947: New connection from 172.22.0.5:55172 on port 1883.
+1713897947: New client connected from 172.22.0.5:55172 as Telegraf-Output-OjrTA (p2, c1, k30).
+1713897948: Client Telegraf-Output-OjrTA closed its connection.
+1713897961: New connection from 172.22.0.5:50988 on port 1883.
+1713897961: New client connected from 172.22.0.5:50988 as Telegraf-Output-il5cQ (p2, c1, k30).
+1713897998: New connection from 192.168.65.1:59533 on port 1883.
+1713897998: New client connected from 192.168.65.1:59533 as mqtt-d219fbf0-446f-4ead-8eb6-68f753205933 (p2, c1, k30).
+1713898020: New connection from 192.168.65.1:59576 on port 1883.
+1713898020: New client connected from 192.168.65.1:59576 as mqtt-1ae6815f-6b5b-494c-8e9b-2fda63e0926d (p2, c1, k30).
+1713898042: Client mqtt-1ae6815f-6b5b-494c-8e9b-2fda63e0926d closed its connection.
+1713898045: Client mqtt-d219fbf0-446f-4ead-8eb6-68f753205933 closed its connection.
+1713898210: New connection from 192.168.65.1:59844 on port 1883.
+1713898210: New client connected from 192.168.65.1:59844 as mqtt-485fa027-c1df-4faa-abcb-86d345c488f1 (p2, c1, k30).
+1713898211: New connection from 192.168.65.1:59845 on port 1883.
+1713898211: New client connected from 192.168.65.1:59845 as mqtt-01d13883-ed20-494a-b927-896d0f05df4c (p2, c1, k30).
+1713898246: Client mqtt-01d13883-ed20-494a-b927-896d0f05df4c closed its connection.
+1713898247: Client mqtt-485fa027-c1df-4faa-abcb-86d345c488f1 closed its connection.
+1713899728: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1713901529: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1713903330: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1713905130: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1713906932: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1713907232: Client Telegraf-Output-il5cQ disconnected.
+1713907232: mosquitto version 2.0.15 terminating
+1713907232: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1714167163: mosquitto version 2.0.15 starting
+1714167163: Config loaded from /mosquitto/config/mosquitto.conf.
+1714167163: Opening ipv4 listen socket on port 1883.
+1714167163: Opening ipv6 listen socket on port 1883.
+1714167163: mosquitto version 2.0.15 running
+1714167164: New connection from 172.22.0.6:41096 on port 1883.
+1714167164: New client connected from 172.22.0.6:41096 as Telegraf-Output-jEHE3 (p2, c1, k30).
+1714167164: Client Telegraf-Output-jEHE3 closed its connection.
+1714167165: New connection from 172.22.0.6:41110 on port 1883.
+1714167165: New client connected from 172.22.0.6:41110 as Telegraf-Output-dRd0d (p2, c1, k30).
+1714167165: Client Telegraf-Output-dRd0d closed its connection.
+1714167166: New connection from 172.22.0.6:41124 on port 1883.
+1714167166: New client connected from 172.22.0.6:41124 as Telegraf-Output-dNaIb (p2, c1, k30).
+1714167167: Client Telegraf-Output-dNaIb closed its connection.
+1714167167: New connection from 172.22.0.6:41130 on port 1883.
+1714167167: New client connected from 172.22.0.6:41130 as Telegraf-Output-wig67 (p2, c1, k30).
+1714167168: Client Telegraf-Output-wig67 closed its connection.
+1714167169: New connection from 172.22.0.6:41138 on port 1883.
+1714167169: New client connected from 172.22.0.6:41138 as Telegraf-Output-dJ5iy (p2, c1, k30).
+1714167171: Client Telegraf-Output-dJ5iy closed its connection.
+1714167172: New connection from 172.22.0.5:38500 on port 1883.
+1714167172: New client connected from 172.22.0.5:38500 as Telegraf-Output-U3Of5 (p2, c1, k30).
+1714167174: Client Telegraf-Output-U3Of5 closed its connection.
+1714167178: New connection from 172.22.0.5:33446 on port 1883.
+1714167178: New client connected from 172.22.0.5:33446 as Telegraf-Output-f6YFA (p2, c1, k30).
+1714167178: Client Telegraf-Output-f6YFA closed its connection.
+1714167185: New connection from 172.22.0.2:35180 on port 1883.
+1714167185: New client connected from 172.22.0.2:35180 as Telegraf-Output-w0QD8 (p2, c1, k30).
+1714167186: Client Telegraf-Output-w0QD8 closed its connection.
+1714167199: New connection from 172.22.0.6:41580 on port 1883.
+1714167199: New client connected from 172.22.0.6:41580 as Telegraf-Output-Xfl82 (p2, c1, k30).
+1714167296: New connection from 192.168.65.1:19337 on port 1883.
+1714167296: New client connected from 192.168.65.1:19337 as mqtt-bd5b7547-78e1-479d-9cb9-438830d4fcbc (p2, c1, k30).
+1714167311: New connection from 192.168.65.1:19352 on port 1883.
+1714167311: New client connected from 192.168.65.1:19352 as mqtt-fdb1c698-0c1a-4922-ac75-7c7fbaa9c21c (p2, c1, k30).
