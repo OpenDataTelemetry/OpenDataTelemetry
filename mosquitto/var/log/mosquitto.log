@@ -2969,3 +2969,7 @@
 1714167296: New client connected from 192.168.65.1:19337 as mqtt-bd5b7547-78e1-479d-9cb9-438830d4fcbc (p2, c1, k30).
 1714167311: New connection from 192.168.65.1:19352 on port 1883.
 1714167311: New client connected from 192.168.65.1:19352 as mqtt-fdb1c698-0c1a-4922-ac75-7c7fbaa9c21c (p2, c1, k30).
+1714168296: Client mqtt-bd5b7547-78e1-479d-9cb9-438830d4fcbc disconnected.
+1714168489: Client Telegraf-Output-Xfl82 disconnected.
+1714168489: mosquitto version 2.0.15 terminating
+1714168489: Saving in-memory database to /mosquitto/data//mosquitto.db.
