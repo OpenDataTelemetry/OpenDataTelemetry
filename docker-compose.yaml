@@ -1,21 +1,21 @@
 version: '3.3'
 
 services:
-  mosquitto:
-    container_name: mosquitto
-    restart: always
-    image: eclipse-mosquitto:2.0.15-openssl
-    volumes:
-      - ./mosquitto/etc:/mosquitto/config
-      - ./mosquitto/var/data:/mosquitto/data
-      - ./mosquitto/var/log:/mosquitto/log
-    ports:
-      - 1883:1883
-      # - 8883:8883
-      # - 9001:9001
-      # - 9002:9002
-    networks:
-      - open-data-telemetry-network
+  # mosquitto:
+  #   container_name: mosquitto
+  #   restart: always
+  #   image: eclipse-mosquitto:2.0.15-openssl
+  #   volumes:
+  #     - ./mosquitto/etc:/mosquitto/config
+  #     - ./mosquitto/var/data:/mosquitto/data
+  #     - ./mosquitto/var/log:/mosquitto/log
+  #   ports:
+  #     - 1883:1883
+  #     # - 8883:8883
+  #     # - 9001:9001
+  #     # - 9002:9002
+  #   networks:
+  #     - open-data-telemetry-network
 
   zookeeper:
     container_name: zookeeper
@@ -56,11 +56,11 @@ services:
     - kafka
     environment:
       KAFKA_BROKER: "kafka:9092"
-      KAFKA_TOPIC: "SmartCampusMaua.smartcampusmaua"
+      KAFKA_TOPIC: "IMT.SmartCampusMaua"
       INFLUXDB_URL: "https://us-east-1-1.aws.cloud2.influxdata.com"
       INFLUXDB_TOKEN: "fq2IqC2r2vEf0o9WhN6D9TAbW3kR2X4Cq53m_HEiJHcR3VncntEOoGFKgk_9lVhS6jhV1ETqXq65_wffpXrR4w=="
-      INFLUXDB_ORGANIZATION: "SmartCampusMaua"
-      INFLUXDB_DATABASE: "smartcampusmaua"
+      INFLUXDB_ORGANIZATION: "IMT"
+      INFLUXDB_DATABASE: "SmartCampusMaua"
     volumes:
       - ./telegraf-kafka-influxdb/telegraf.conf:/etc/telegraf/telegraf.conf:ro
     networks:
@@ -75,8 +75,8 @@ services:
     - mosquitto
     environment:
       KAFKA_BROKER: "kafka:9092"
-      KAFKA_TOPIC: "SmartCampusMaua.smartcampusmaua"
-      MQTT_TOPIC: "SmartCampusMaua/{{ .PluginName }}"
+      KAFKA_TOPIC: "IMT.SmartCampusMaua"
+      MQTT_TOPIC: "IMT/{{ .PluginName }}"
       MQTT_BROKER: "mqtt://mosquitto:1883"
     volumes:
       - ./telegraf-kafka-mqtt/telegraf.conf:/etc/telegraf/telegraf.conf:ro
