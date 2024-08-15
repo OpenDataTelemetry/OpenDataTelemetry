@@ -2973,3 +2973,89 @@
 1714168489: Client Telegraf-Output-Xfl82 disconnected.
 1714168489: mosquitto version 2.0.15 terminating
 1714168489: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1715800139: mosquitto version 2.0.15 starting
+1715800139: Config loaded from /mosquitto/config/mosquitto.conf.
+1715800139: Opening ipv4 listen socket on port 1883.
+1715800139: Opening ipv6 listen socket on port 1883.
+1715800139: mosquitto version 2.0.15 running
+1715800140: New connection from 172.18.0.6:37642 on port 1883.
+1715800140: New client connected from 172.18.0.6:37642 as Telegraf-Output-Iepno (p2, c1, k30).
+1715800140: Client Telegraf-Output-Iepno closed its connection.
+1715800141: New connection from 172.18.0.5:45944 on port 1883.
+1715800141: New client connected from 172.18.0.5:45944 as Telegraf-Output-rKmHI (p2, c1, k30).
+1715800141: Client Telegraf-Output-rKmHI closed its connection.
+1715800142: New connection from 172.18.0.5:45960 on port 1883.
+1715800142: New client connected from 172.18.0.5:45960 as Telegraf-Output-U7IkR (p2, c1, k30).
+1715800326: New connection from 192.168.65.1:35989 on port 1883.
+1715800326: New client connected from 192.168.65.1:35989 as mqtt-5abc992e-f967-47ab-85c7-a578f6792f5a (p2, c1, k30).
+1715800414: New connection from 192.168.65.1:36087 on port 1883.
+1715800414: New client connected from 192.168.65.1:36087 as mqtt-ebd6c951-ee45-4c08-a0c1-d69a7d6ff846 (p2, c1, k30).
+1715804234: Client mqtt-ebd6c951-ee45-4c08-a0c1-d69a7d6ff846 disconnected.
+1715804248: New connection from 192.168.65.1:37748 on port 1883.
+1715804248: New client connected from 192.168.65.1:37748 as mqtt-1b76b343-28f7-467e-91e8-0df7fdb30516 (p2, c1, k30).
+1715804289: Client mqtt-1b76b343-28f7-467e-91e8-0df7fdb30516 closed its connection.
+1715804303: Client mqtt-5abc992e-f967-47ab-85c7-a578f6792f5a closed its connection.
+1715804333: New connection from 192.168.65.1:37893 on port 1883.
+1715804333: New client connected from 192.168.65.1:37893 as mqtt-50d1f9ea-a9ac-4cdd-8291-69bb124b6caa (p2, c1, k30).
+1715804356: New connection from 192.168.65.1:37926 on port 1883.
+1715804356: New client connected from 192.168.65.1:37926 as mqtt-9a82c777-1340-4a1b-897e-21ac65967ee1 (p2, c1, k30).
+1715804785: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1715805333: Client mqtt-50d1f9ea-a9ac-4cdd-8291-69bb124b6caa disconnected.
+1715806585: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1715808386: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1715810188: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1715810389: New connection from 192.168.65.1:47660 on port 1883.
+1715810389: New client connected from 192.168.65.1:47660 as mqtt-b8d56e24-0b3c-4558-be61-a01307cf2ac0 (p2, c1, k30).
+1715814804: Client mqtt-b8d56e24-0b3c-4558-be61-a01307cf2ac0 disconnected.
+1715817625: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1715825483: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1715908631: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1715910431: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1715912268: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1715914309: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1715914843: Client mqtt-9a82c777-1340-4a1b-897e-21ac65967ee1 closed its connection.
+1715914849: Client Telegraf-Output-U7IkR disconnected.
+1715914850: mosquitto version 2.0.15 terminating
+1715914850: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1716232936: mosquitto version 2.0.15 starting
+1716232936: Config loaded from /mosquitto/config/mosquitto.conf.
+1716232936: Opening ipv4 listen socket on port 1883.
+1716232936: Opening ipv6 listen socket on port 1883.
+1716232936: mosquitto version 2.0.15 running
+1716232937: New connection from 172.18.0.5:35712 on port 1883.
+1716232937: New client connected from 172.18.0.5:35712 as Telegraf-Output-Bols8 (p2, c1, k30).
+1716232937: Client Telegraf-Output-Bols8 closed its connection.
+1716232938: New connection from 172.18.0.5:35718 on port 1883.
+1716232938: New client connected from 172.18.0.5:35718 as Telegraf-Output-F3K11 (p2, c1, k30).
+1716232938: Client Telegraf-Output-F3K11 closed its connection.
+1716232939: New connection from 172.18.0.5:44004 on port 1883.
+1716232939: New client connected from 172.18.0.5:44004 as Telegraf-Output-SYltZ (p2, c1, k30).
+1716232940: Client Telegraf-Output-SYltZ closed its connection.
+1716232940: New connection from 172.18.0.5:44014 on port 1883.
+1716232940: New client connected from 172.18.0.5:44014 as Telegraf-Output-cywND (p2, c1, k30).
+1716232941: Client Telegraf-Output-cywND closed its connection.
+1716232942: New connection from 172.18.0.5:44024 on port 1883.
+1716232942: New client connected from 172.18.0.5:44024 as Telegraf-Output-fXxEW (p2, c1, k30).
+1716234737: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1716236538: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1716240859: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1716243598: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1716245401: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1716247530: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1716253406: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1716255207: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1716258664: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1716323950: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1716326965: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1716328767: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1716339711: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1716343151: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1716423268: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1716614279: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1716743245: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1716745046: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1716746847: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1716748647: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1716750337: Client Telegraf-Output-fXxEW disconnected.
+1716750337: mosquitto version 2.0.15 terminating
+1716750337: Saving in-memory database to /mosquitto/data//mosquitto.db.
