@@ -1,21 +1,21 @@
 version: '3.3'
 
 services:
-  # mosquitto:
-  #   container_name: mosquitto
-  #   restart: always
-  #   image: eclipse-mosquitto:2.0.15-openssl
-  #   volumes:
-  #     - ./mosquitto/etc:/mosquitto/config
-  #     - ./mosquitto/var/data:/mosquitto/data
-  #     - ./mosquitto/var/log:/mosquitto/log
-  #   ports:
-  #     - 1883:1883
-  #     # - 8883:8883
-  #     # - 9001:9001
-  #     # - 9002:9002
-  #   networks:
-  #     - open-data-telemetry-network
+  mosquitto:
+    container_name: mosquitto
+    restart: always
+    image: eclipse-mosquitto:2.0.15-openssl
+    volumes:
+      - ./mosquitto/etc:/mosquitto/config
+      - ./mosquitto/var/data:/mosquitto/data
+      - ./mosquitto/var/log:/mosquitto/log
+    ports:
+      - 1883:1883
+      # - 8883:8883
+      # - 9001:9001
+      # - 9002:9002
+    networks:
+      - open-data-telemetry-network
 
   zookeeper:
     container_name: zookeeper
@@ -66,31 +66,31 @@ services:
   #   networks:
   #     - open-data-telemetry-network
 
-  # telegraf-kafka-mqtt:
-  #   container_name: telegraf-kafka-mqtt
-  #   restart: always
-  #   image: telegraf:1.29.3-alpine
-  #   depends_on:
-  #   - kafka
-  #   - mosquitto
-  #   environment:
-  #     KAFKA_BROKER: "kafka:9092"
-  #     KAFKA_TOPIC: "SmartCampusMaua.smartcampusmaua"
-  #     MQTT_TOPIC: "SmartCampusMaua/{{ .PluginName }}"
-  #     MQTT_BROKER: "mqtt://mosquitto:1883"
-  #   volumes:
-  #     - ./telegraf-kafka-mqtt/telegraf.conf:/etc/telegraf/telegraf.conf:ro
-  #   networks:
-  #     - open-data-telemetry-network
+  telegraf-kafka-mqtt:
+    container_name: telegraf-kafka-mqtt
+    restart: always
+    image: telegraf:1.29.3-alpine
+    depends_on:
+    - kafka
+    - mosquitto
+    environment:
+      KAFKA_BROKER: "kafka:9092"
+      KAFKA_TOPIC: "IMT.SmartCampusMaua"
+      MQTT_TOPIC: "IMT/{{ .PluginName }}"
+      MQTT_BROKER: "mqtt://mosquitto:1883"
+    volumes:
+      - ./telegraf-kafka-mqtt/telegraf.conf:/etc/telegraf/telegraf.conf:ro
+    networks:
+      - open-data-telemetry-network
 
-  # mqtt-topic-rewrite-lns-imt:
-  #   container_name: mqtt-topic-rewrite-lns-imt
-  #   restart: always
-  #   image: rogeriocassares/mqtt-topic-rewrite-lns-imt:0.1
-  #   depends_on:
-  #   - mosquitto
-  #   networks:
-  #     - open-data-telemetry-network
+  mqtt-topic-rewrite-lns-imt:
+    container_name: mqtt-topic-rewrite-lns-imt
+    restart: always
+    image: rogeriocassares/mqtt-topic-rewrite-lns-imt:0.5
+    depends_on:
+    - mosquitto
+    networks:
+      - open-data-telemetry-network
 
 
       
