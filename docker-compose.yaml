@@ -48,40 +48,40 @@ services:
     networks:
       - open-data-telemetry-network
 
-  telegraf-kafka-influxdb:
-    container_name: telegraf-kafka-influxdb
-    restart: always
-    image: telegraf:1.29.3-alpine
-    depends_on:
-    - kafka
-    environment:
-      KAFKA_BROKER: "kafka:9092"
-      KAFKA_TOPIC: "IMT.SmartCampusMaua"
-      INFLUXDB_URL: "https://us-east-1-1.aws.cloud2.influxdata.com"
-      INFLUXDB_TOKEN: "fq2IqC2r2vEf0o9WhN6D9TAbW3kR2X4Cq53m_HEiJHcR3VncntEOoGFKgk_9lVhS6jhV1ETqXq65_wffpXrR4w=="
-      INFLUXDB_ORGANIZATION: "IMT"
-      INFLUXDB_DATABASE: "SmartCampusMaua"
-    volumes:
-      - ./telegraf-kafka-influxdb/telegraf.conf:/etc/telegraf/telegraf.conf:ro
-    networks:
-      - open-data-telemetry-network
+  # telegraf-kafka-influxdb:
+  #   container_name: telegraf-kafka-influxdb
+  #   restart: always
+  #   image: telegraf:1.29.3-alpine
+  #   depends_on:
+  #   - kafka
+  #   environment:
+  #     KAFKA_BROKER: "kafka:9092"
+  #     KAFKA_TOPIC: "IMT.SmartCampusMaua"
+  #     INFLUXDB_URL: "https://us-east-1-1.aws.cloud2.influxdata.com"
+  #     INFLUXDB_TOKEN: "fq2IqC2r2vEf0o9WhN6D9TAbW3kR2X4Cq53m_HEiJHcR3VncntEOoGFKgk_9lVhS6jhV1ETqXq65_wffpXrR4w=="
+  #     INFLUXDB_ORGANIZATION: "IMT"
+  #     INFLUXDB_DATABASE: "SmartCampusMaua"
+  #   volumes:
+  #     - ./telegraf-kafka-influxdb/telegraf.conf:/etc/telegraf/telegraf.conf:ro
+  #   networks:
+  #     - open-data-telemetry-network
 
-  telegraf-kafka-mqtt:
-    container_name: telegraf-kafka-mqtt
-    restart: always
-    image: telegraf:1.29.3-alpine
-    depends_on:
-    - kafka
-    - mosquitto
-    environment:
-      KAFKA_BROKER: "kafka:9092"
-      KAFKA_TOPIC: "IMT.SmartCampusMaua"
-      MQTT_TOPIC: "IMT/{{ .PluginName }}"
-      MQTT_BROKER: "mqtt://mosquitto:1883"
-    volumes:
-      - ./telegraf-kafka-mqtt/telegraf.conf:/etc/telegraf/telegraf.conf:ro
-    networks:
-      - open-data-telemetry-network
+  # telegraf-kafka-mqtt:
+  #   container_name: telegraf-kafka-mqtt
+  #   restart: always
+  #   image: telegraf:1.29.3-alpine
+  #   depends_on:
+  #   - kafka
+  #   - mosquitto
+  #   environment:
+  #     KAFKA_BROKER: "kafka:9092"
+  #     KAFKA_TOPIC: "IMT.SmartCampusMaua"
+  #     MQTT_TOPIC: "IMT/{{ .PluginName }}"
+  #     MQTT_BROKER: "mqtt://mosquitto:1883"
+  #   volumes:
+  #     - ./telegraf-kafka-mqtt/telegraf.conf:/etc/telegraf/telegraf.conf:ro
+  #   networks:
+  #     - open-data-telemetry-network
 
   
 
